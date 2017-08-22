@@ -1,0 +1,18 @@
+
+<form  #form="ngForm" (ngSubmit)="onSubmit(form.value)"  >
+  <h1>Phone Book Forum</h1>
+  <hr>
+  <div >
+ Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text"ngModel name="name"size=30><br>
+  </div>
+  <div>
+   Phone Number:
+    <input type="text"ngModel name="Phone Number" size=30><br>
+  </div>  
+    <button type="submit">Add</button>
+    <button type="submit">Delete</button>
+    <input type="button"onclick="onSubmit()" value="Add">
+    <input type="button"onclick="delet()" value="Delete"><br>
+</form>
+{{form.value|json}}
