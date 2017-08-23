@@ -10,10 +10,10 @@ import 'rxjs/Rx';
 })
 export class PhoneBookComponent implements OnInit {
   showForm=false;
-  Back(){
+  ShowForm(){
     this.showForm=true;
   }
-  Add(){
+  ShowList(){
     this.showForm=false;
   }
   ngOnInit() {

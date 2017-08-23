@@ -5,6 +5,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 import { ListModule } from "./list/list.module";
 import { FormModule } from "./form/form.module";
+import { PhoneBookService } from "./phone-book.service";
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +16,9 @@ import { FormModule } from "./form/form.module";
   ],
   exports:[
     PhoneBookComponent
+  ],
+  providers:[
+    PhoneBookService
   ],
   declarations: [PhoneBookComponent]
 })

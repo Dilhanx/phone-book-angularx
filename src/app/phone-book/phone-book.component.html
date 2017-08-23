@@ -1,3 +1,4 @@
-<app-form *ngIf="showForm" (onAdd)="Add()"></app-form>
 <hr>
-<app-list *ngIf="!showForm" (onBack)="Back()"></app-list>
+<app-form *ngIf="showForm" (onList)="ShowList()"></app-form>
+<app-list *ngIf="!showForm" (onForm)="ShowForm()"></app-list>
+<hr>
