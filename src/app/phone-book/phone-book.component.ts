@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Headers, Http, Response } from '@angular/http';
+
 import 'rxjs/Rx';
 
 @Component({
@@ -8,9 +9,15 @@ import 'rxjs/Rx';
   styleUrls: ['./phone-book.component.css']
 })
 export class PhoneBookComponent implements OnInit {
-  
+  showForm=false;
+  Back(){
+    this.showForm=true;
+  }
+  Add(){
+    this.showForm=false;
+  }
   ngOnInit() {
-    console.log("Phone Book")
+
 
   }
   

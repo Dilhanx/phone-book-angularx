@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 import { Headers, Http, Response } from '@angular/http';
 import 'rxjs/Rx';
 @Component({
@@ -18,9 +18,11 @@ export class ListComponent implements OnInit {
     },
 
   ]
-
-
-  http: Http
+  @Output() onBack: EventEmitter<any> = new EventEmitter();
+  Back(){
+    console.log("back")
+    this.onBack.emit()
+  }
 
 
   constructor() { }
